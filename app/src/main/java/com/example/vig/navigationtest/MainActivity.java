@@ -1,6 +1,5 @@
 package com.example.vig.navigationtest;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -83,24 +82,11 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        if (id == R.id.nav_camera) {
+            // Handle the camera action
+        } else if (id == R.id.nav_gallery) {
 
-        if (id == R.id.nav_printer) {
-
-        }
-        else if (id == R.id.nav_test)
-        {
-            Intent myIntent = new Intent(MainActivity.this, TestActivity.class);
-            myIntent.putExtra("key", ""); //Optional parameters
-            myIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            MainActivity.this.startActivity(myIntent);
-        }
-        else if (id == R.id.nav_wifi)
-        {
-
-        }
-        else if (id == R.id.nav_gallery) {
-
-        }else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
 

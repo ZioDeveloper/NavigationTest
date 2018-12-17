@@ -5,33 +5,10 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_test"
-            android:icon="@drawable/ic_menu_delete"
-            android:title="Test activity" />
-        <item
-            android:id="@+id/nav_printer"
-            android:icon="@drawable/ic_menu_printer"
-            android:title="Printer settings" />
-        <item
-            android:id="@+id/nav_wifi"
-            android:icon="@drawable/ic_menu_wifi"
-            android:title="Wi-Fi settings" />
-        <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/nav_browser"
+            android:icon="@drawable/ic_menu_help_web_black"
+            android:title="Browser" />
+
     </group>
 
     <item android:title="Communicate">
