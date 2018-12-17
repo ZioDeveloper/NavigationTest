@@ -5,6 +5,14 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_printer"
+            android:icon="@drawable/ic_menu_printer"
+            android:title="Printer settings" />
+        <item
+            android:id="@+id/nav_wifi"
+            android:icon="@drawable/ic_menu_wifi"
+            android:title="Wi-Fi settings" />
+        <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_menu_camera"
             android:title="Import" />
