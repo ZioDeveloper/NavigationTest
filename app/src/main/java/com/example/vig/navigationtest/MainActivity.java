@@ -87,12 +87,16 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_printer) {
 
         }
-        else if (id == R.id.nav_wifi)
+        else if (id == R.id.nav_test)
         {
-            Intent myIntent = new Intent(MainActivity.this, Activity_wifi_settings.class);
+            Intent myIntent = new Intent(MainActivity.this, TestActivity.class);
             myIntent.putExtra("key", ""); //Optional parameters
             myIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             MainActivity.this.startActivity(myIntent);
+        }
+        else if (id == R.id.nav_wifi)
+        {
+
         }
         else if (id == R.id.nav_gallery) {
 

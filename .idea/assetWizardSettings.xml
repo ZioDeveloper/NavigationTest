@@ -19,8 +19,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="D:\SandBox\Icons\2x\baseline_wifi_black_24dp.png" />
-                                      <entry key="outputName" value="ic_menu_wifi" />
+                                      <entry key="imageAsset" value="D:\SandBox\Icons\2x\sharp_help_black_24dp.png" />
+                                      <entry key="outputName" value="ic_menu_help_request_black" />
                                     </map>
                                   </option>
                                 </PersistentState>
