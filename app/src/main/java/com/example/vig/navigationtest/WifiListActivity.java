@@ -27,11 +27,14 @@ public class WifiListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wifi_list);
+        listView = findViewById(R.id.listView);
+        lista = new ArrayList<>();
+
         getCurrentSsid(WifiListActivity.this);
 
-        listView = findViewById(R.id.listView);
 
-
+        adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, lista);
+        listView.setAdapter(adapter);
     }
 
 
@@ -46,6 +49,7 @@ public class WifiListActivity extends AppCompatActivity {
             if (connectionInfo != null && !(connectionInfo.getSSID().equals(""))) {
                 //if (connectionInfo != null && !StringUtil.isBlank(connectionInfo.getSSID())) {
                 ssid = connectionInfo.getSSID();
+                lista.add(ssid);
             }
             // Get WiFi status MARAKANA
             WifiInfo info = wifiManager.getConnectionInfo();
@@ -69,6 +73,7 @@ public class WifiListActivity extends AppCompatActivity {
             List<WifiConfiguration> configs = wifiManager.getConfiguredNetworks();
             for (WifiConfiguration config : configs) {
                 textStatus += "\n\n" + config.toString();
+                lista.add(config.toString());
             }
             Log.v(TAG, "from marakana: \n" + textStatus);
         }
