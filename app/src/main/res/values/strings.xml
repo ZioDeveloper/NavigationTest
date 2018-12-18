@@ -13,4 +13,7 @@
     <string name="send">Send</string>
     <string name="communicate">Communicate</string>
     <string name="wifi">WiFi</string>
+    <string name="title_activity_connect">connect</string>
+    <string name="title_activity_list_item">list_item</string>
+    <string name="list">list</string>
 </resources>

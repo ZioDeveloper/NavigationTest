@@ -88,8 +88,12 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_gallery) {
             Intent intent = new Intent(this, TestActivity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_slideshow) {
-
+        } else if (id == R.id.nav_wifi) {
+            Intent intent = new Intent(this, Activity_wifi_settings.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_list) {
+            Intent intent = new Intent(this, ListActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {

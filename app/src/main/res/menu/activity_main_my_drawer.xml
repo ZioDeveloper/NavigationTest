@@ -16,6 +16,10 @@
             android:id="@+id/nav_wifi"
             android:icon="@drawable/ic_menu_wifi"
             android:title="@string/wifi" />
+        <item
+            android:id="@+id/nav_list"
+            android:icon="@drawable/ic_menu_share"
+            android:title="@string/list" />
 
     </group>
 
