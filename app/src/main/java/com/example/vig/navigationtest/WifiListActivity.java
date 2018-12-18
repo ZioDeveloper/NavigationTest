@@ -1,6 +1,8 @@
 package com.example.vig.navigationtest;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.wifi.ScanResult;
@@ -31,7 +33,6 @@ public class WifiListActivity extends AppCompatActivity {
         lista = new ArrayList<>();
 
         getCurrentSsid(WifiListActivity.this);
-
 
         adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, lista);
         listView.setAdapter(adapter);
@@ -79,4 +80,6 @@ public class WifiListActivity extends AppCompatActivity {
         }
         return ssid;
     }
+
+
 }
