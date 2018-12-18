@@ -33,7 +33,7 @@ public class ListActivity extends AppCompatActivity {
         listView = findViewById(R.id.listView);
 
         lista = new ArrayList<>();
-        inizializzaLista(6);
+        inizializzaLista(5);
 
         adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, lista);
         listView.setAdapter(adapter);

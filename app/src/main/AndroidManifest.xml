@@ -28,7 +28,8 @@
         <activity android:name=".BrowseActivity" />
         <activity android:name=".TestActivity" />
         <activity android:name=".Activity_wifi_settings" />
-        <activity android:name=".ListActivity"></activity>
+        <activity android:name=".ListActivity" />
+        <activity android:name=".WifiListActivity"></activity>
     </application>
 
 </manifest>

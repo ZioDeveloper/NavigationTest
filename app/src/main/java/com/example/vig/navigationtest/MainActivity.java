@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, TestActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_wifi) {
-            Intent intent = new Intent(this, Activity_wifi_settings.class);
+            Intent intent = new Intent(this, WifiListActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_list) {
             Intent intent = new Intent(this, ListActivity.class);
