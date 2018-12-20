@@ -1,9 +1,12 @@
 package com.example.vig.navigationtest;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -29,7 +32,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Apri gestione foto...", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -94,8 +97,6 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_list) {
             Intent intent = new Intent(this, ListActivity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_manage) {
-
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
@@ -105,5 +106,34 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void OpenWifiCenter() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("Open WIFI settings...");
+        builder.setMessage("Press OK to go to WIFI settings !");
+
+        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+
+            public void onClick(DialogInterface dialog, int which) {
+                startActivityForResult(new Intent(Settings.ACTION_WIFI_SETTINGS), 0);
+                dialog.dismiss();
+                //lblWiFiConnName.performClick();
+            }
+
+        });
+
+        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+
+
+            public void onClick(DialogInterface dialog, int which) {
+                // I do not need any action here you might
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }

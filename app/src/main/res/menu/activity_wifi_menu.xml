@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mnu_goto_settings"
+        android:icon="@drawable/ic_menu_manage"
+        android:title="Goto Wi Fi settings..." />
+    <item
+        android:id="@+id/mnu_rescan"
+        android:icon="@drawable/ic_menu_wifi"
+        android:title="Re-scan Wi Fi network..." />
+</menu>
