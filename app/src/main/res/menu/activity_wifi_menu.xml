@@ -5,9 +5,9 @@
     <item
         android:id="@+id/mnu_goto_settings"
         android:icon="@drawable/ic_menu_manage"
-        android:title="Goto Wi Fi settings..." />
+        android:title="@string/goto_wi_fi_settings" />
     <item
         android:id="@+id/mnu_rescan"
         android:icon="@drawable/ic_menu_wifi"
-        android:title="Re-scan Wi Fi network..." />
+        android:title="@string/re_scan_wi_fi_network" />
 </menu>
