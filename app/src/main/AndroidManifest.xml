@@ -3,10 +3,10 @@
     package="com.example.vig.navigationtest">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -29,7 +29,8 @@
         <activity android:name=".TestActivity" />
         <activity android:name=".Activity_wifi_settings" />
         <activity android:name=".ListActivity" />
-        <activity android:name=".WifiListActivity"></activity>
+        <activity android:name=".WifiListActivity" />
+        <activity android:name=".WebServiceActivity"></activity>
     </application>
 
 </manifest>
