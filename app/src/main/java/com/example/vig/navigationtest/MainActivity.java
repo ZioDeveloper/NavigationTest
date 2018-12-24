@@ -20,6 +20,9 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
+    private static final int SELECT_IMAGE = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,8 +101,12 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, ListActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_share) {
-
+            Intent intent = new Intent();
+            intent.setType("image/*");
+            intent.setAction(Intent.ACTION_GET_CONTENT);
+            startActivityForResult(Intent.createChooser(intent, "Select Picture"),SELECT_IMAGE);
         } else if (id == R.id.nav_send) {
+
 
         }
         else if (id == R.id.nav_webservice) {
