@@ -117,6 +117,15 @@ public class MainActivity extends AppCompatActivity
         else if (id == R.id.nav_webservice) {
             Intent intent = new Intent(this, WebServiceActivity.class);
             startActivity(intent);
+
+        }
+        else if (id == R.id.nav_intents) {
+            Intent intent = new Intent(this, IntentActivity.class);
+            intent.putExtra(Intent.EXTRA_TEXT, "Ciao Intent ! sono un messaggio da " + MainActivity.this.getLocalClassName());
+            intent.putExtra("MioParametro", "Ciao Intent !\nMessaggio con mio param  da " + MainActivity.this.getLocalClassName() +
+                                                         "\nSono un esempio di Intent esplicito con parametro ");
+            startActivity(intent);
+
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

@@ -21,4 +21,6 @@
     <string name="test_web_service">Test web service</string>
     <string name="pictures">Work with picture</string>
     <string name="button">Button</string>
+    <string name="item">Various intents...</string>
+    <string name="intents">Work with Intents</string>
 </resources>
