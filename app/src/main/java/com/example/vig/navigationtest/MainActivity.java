@@ -3,6 +3,8 @@ package com.example.vig.navigationtest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,12 +18,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import java.io.File;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
     private static final int SELECT_IMAGE = 0;
+    private static final int CAMERA_REQUEST = 0 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,13 +107,12 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, ListActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_share) {
-            Intent intent = new Intent();
-            intent.setType("image/*");
-            intent.setAction(Intent.ACTION_GET_CONTENT);
-            startActivityForResult(Intent.createChooser(intent, "Select Picture"),SELECT_IMAGE);
-        } else if (id == R.id.nav_send) {
+            Intent i = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(i, 0);
+        } else if (id == R.id.nav_pictures) {
 
-
+            Intent intent = new Intent(this, ImageSelectedActivity.class);
+            startActivity(intent);
         }
         else if (id == R.id.nav_webservice) {
             Intent intent = new Intent(this, WebServiceActivity.class);
@@ -119,6 +124,22 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    // This method is called when the second activity finishes
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        // check that it is the SecondActivity with an OK result
+        if (requestCode == CAMERA_REQUEST) {
+            if (resultCode == RESULT_OK) { // Activity.RESULT_OK
+
+                // get String data from Intent
+                String returnString = data.getStringExtra("keyName");
+                Toast.makeText(MainActivity.this," Elemento : " + CAMERA_REQUEST, Toast.LENGTH_LONG).show();
+
+            }
+        }
+    }
     public void OpenWifiCenter() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 

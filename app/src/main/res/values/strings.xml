@@ -16,7 +16,9 @@
     <string name="title_activity_connect">connect</string>
     <string name="title_activity_list_item">list_item</string>
     <string name="list">list</string>
-    <string name="goto_wi_fi_settings">Goto Wi Fi settings...</string>
-    <string name="re_scan_wi_fi_network">Re-scan Wi Fi network...</string>
+    <string name="goto_wi_fi_settings">Goto Wi Fi settings…</string>
+    <string name="re_scan_wi_fi_network">Re-scan Wi Fi network…</string>
     <string name="test_web_service">Test web service</string>
+    <string name="pictures">Work with picture</string>
+    <string name="button">Button</string>
 </resources>
